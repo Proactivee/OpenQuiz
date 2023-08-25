@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad7_9" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="744" height="1133"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MfJ-lZ-jnV">
+                                <rect key="frame" x="20" y="34" width="704" height="1069"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ixh-YO-UCN">
+                                        <rect key="frame" x="92" y="0.0" width="520" height="673"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFF-aw-WMM" customClass="QuestionView" customModule="OpenQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="520" height="563.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zpd-Ex-S71">
+                                                        <rect key="frame" x="8" y="8" width="504" height="547.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTE-dR-vxU">
+                                                                <rect key="frame" x="178.5" y="0.0" width="147" height="477.5"/>
+                                                                <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="23"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="60"/>
+                                                                </variation>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon Error" translatesAutoresizingMaskIntoConstraints="NO" id="DyE-hN-xDD">
+                                                                <rect key="frame" x="217" y="477.5" width="70" height="70"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="35" id="7fG-9w-MzG">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="70"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="height" constant="35" id="9jE-4I-PBe">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="70"/>
+                                                                    </constraint>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Zpd-Ex-S71" secondAttribute="height" multiplier="81:88" id="a4f-p5-nMf"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.75294119120000003" green="0.76862752440000004" blue="0.78431367870000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Zpd-Ex-S71" secondAttribute="trailing" constant="8" id="VEc-sy-G07"/>
+                                                    <constraint firstItem="Zpd-Ex-S71" firstAttribute="leading" secondItem="FFF-aw-WMM" secondAttribute="leading" constant="8" id="dKQ-ba-D7j"/>
+                                                    <constraint firstAttribute="width" constant="259" id="dZb-kC-qX4">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="520"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="bottom" secondItem="Zpd-Ex-S71" secondAttribute="bottom" constant="8" id="gTy-Q2-S3r"/>
+                                                    <constraint firstItem="Zpd-Ex-S71" firstAttribute="top" secondItem="FFF-aw-WMM" secondAttribute="top" constant="8" id="oVh-zY-Pz3"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="icone" destination="DyE-hN-xDD" id="suQ-7Q-i8e"/>
+                                                    <outlet property="label" destination="hTE-dR-vxU" id="X6b-Oy-1hn"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 10 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ni4-rP-Jiv">
+                                                <rect key="frame" x="175.5" y="603.5" width="169" height="69.5"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="27"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="77F-k1-Buf">
+                                        <rect key="frame" x="152" y="1023.5" width="400" height="45.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8g-Dm-YGk">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="45.5"/>
+                                                <color key="backgroundColor" red="0.40392160420000001" green="0.54901963470000004" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="New Game" titleAlignment="automatic">
+                                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="27"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapeNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZYY-9g-9kj"/>
+                                                </connections>
+                                            </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="drN-dn-ehC">
+                                                <rect key="frame" x="0.0" y="4.5" width="0.0" height="37"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="185" id="GRA-l1-b1s">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                            </constraint>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.35686278339999999" green="0.41568624970000001" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="MfJ-lZ-jnV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Gw3-aO-CSR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MfJ-lZ-jnV" secondAttribute="bottom" constant="10" id="cwD-AE-bWA"/>
+                            <constraint firstItem="MfJ-lZ-jnV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="fEf-nN-pcM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MfJ-lZ-jnV" secondAttribute="trailing" constant="20" id="hki-Ik-Drn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="drN-dn-ehC" id="0LC-t5-Agv"/>
+                        <outlet property="newGameButton" destination="x8g-Dm-YGk" id="JXD-U4-EGG"/>
+                        <outlet property="questionView" destination="FFF-aw-WMM" id="sRc-XY-l8d"/>
+                        <outlet property="score" destination="Ni4-rP-Jiv" id="tj7-ug-ABC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.74045801526717" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon Error" width="36" height="35"/>
+    </resources>
+</document>
