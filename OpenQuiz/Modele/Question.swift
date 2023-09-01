@@ -8,27 +8,27 @@
 import Foundation
 
 struct Question {
-    var title : String = ""
-    var isCorrect : Bool = false
+    var title: String = ""
+    var isCorrect: Bool = false
 }
 
-class Game{
+class Game {
     var score = 0
     private var questions = [Question]()
     private var currentIndex = 0
-    
-    var state : State = .ongoing
-    
-    enum State{
+
+    var state: State = .ongoing
+
+    enum State {
     case ongoing, over
     }
-    
+
     var currentQuestion: Question {
-        
+
         return questions[currentIndex]
     }
-    
-    func refresh(){
+
+    func refresh() {
         score = 0
         currentIndex = 0
         state = .over
@@ -40,26 +40,27 @@ class Game{
             NotificationCenter.default.post(notification)
         }
     }
-    private func receiveQuestion (_ questions : [Question]){
+
+    private func receiveQuestion (_ questions: [Question]) {
         self.questions = questions
         state = .ongoing
-        
+
     }
-    func answerCurrentQuestion (with answer: Bool){
-        if(currentQuestion.isCorrect && answer) || (!currentQuestion.isCorrect && !answer){
+    func answerCurrentQuestion (with answer: Bool) {
+        if(currentQuestion.isCorrect && answer) || (!currentQuestion.isCorrect && !answer) {
             score += 1
         }
         goToNextQuestion()
     }
-   private func goToNextQuestion(){
-        if (currentIndex < questions.count - 1){
+   private func goToNextQuestion() {
+        if currentIndex < questions.count - 1 {
             currentIndex += 1
-        }else{
-            finishGame ()
+        } else {
+            finishGame()
         }
     }
-    
-    func finishGame(){
+
+    func finishGame() {
         state = .over
     }
 }

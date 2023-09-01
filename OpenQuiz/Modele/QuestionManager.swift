@@ -14,9 +14,8 @@ class QuestionManager {
     static let shared = QuestionManager()
     private init() {}
 
-
-    func get(completionHandler: @escaping ([Question]) -> ()) {
-        let task = URLSession.shared.dataTask(with: self.url) { (data, response, error) in
+    func get(completionHandler: @escaping ([Question]) -> Void) {
+        let task = URLSession.shared.dataTask(with: self.url) { (data, _, error) in
             guard error == nil else {
                 completionHandler([Question]())
                 return
@@ -38,7 +37,7 @@ class QuestionManager {
         return getQuestionsFrom(parsedDatas: results)
     }
 
-    private func getQuestionsFrom(parsedDatas: [[String: Any]]) -> [Question]{
+    private func getQuestionsFrom(parsedDatas: [[String: Any]]) -> [Question] {
         var retrievedQuestions = [Question]()
 
         for parsedData in parsedDatas {
@@ -57,7 +56,6 @@ class QuestionManager {
     }
 }
 
-
 extension String {
 
     init?(htmlEncodedString: String) {
@@ -71,11 +69,12 @@ extension String {
             NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue
         ]
 
-        guard let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil) else {
+        guard let attributedString = try?
+                NSAttributedString(data: data, options: options, documentAttributes: nil) else {
             return nil
         }
 
         self.init(attributedString.string)
     }
-    
+
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="YfN-w7-NFk">
-                                <rect key="frame" x="205" y="340" width="400" height="400"/>
+                                <rect key="frame" x="94.666666666666686" y="321" width="241" height="290"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="241" id="5tb-js-1Aa">
                                         <variation key="heightClass=regular-widthClass=regular" constant="400"/>
@@ -43,10 +43,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.35686278339999999" green="0.41568624970000001" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="4Jl-Ou-1j1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="4Er-NN-TdA"/>
+                            <constraint firstItem="4Jl-Ou-1j1" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="4Er-NN-TdA"/>
                             <constraint firstItem="YfN-w7-NFk" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="hH8-gD-F6Y"/>
                             <constraint firstItem="YfN-w7-NFk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="p6H-NI-P1V"/>
-                            <constraint firstItem="4Jl-Ou-1j1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wuF-sO-gx3"/>
+                            <constraint firstItem="4Jl-Ou-1j1" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wuF-sO-gx3"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
